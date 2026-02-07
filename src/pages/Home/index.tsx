@@ -1,9 +1,13 @@
-import Container from "../../components/Container";
-import CountDown from "../../components/CountDown";
+import { useEffect } from "react";
+import { Container } from "../../components/Container";
+import { CountDown } from "../../components/CountDown";
 import { MainForm } from "../../components/MainForm";
-import MainTemplate from "../../templete/MainTemplate";
+import { MainTemplate } from "../../templete/MainTemplate";
 
-export default function Home() {
+export function Home() {
+  useEffect(() => {
+    document.title = "Chronos Pomodoro";
+  }, []);
   return (
     <>
       <MainTemplate>
